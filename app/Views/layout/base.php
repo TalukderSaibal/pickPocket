@@ -46,7 +46,7 @@
                     <div class="logo"><a href="<?= base_url('/') ?>">
                     <!-- <img src="<?= base_url('images/logo.png') ?>" alt="" />--> <span>Focus</span> </a></div> 
                     <li class="label">Main</li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard <span
+                    <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Language <span
                                 class="badge badge-primary">2</span> <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>

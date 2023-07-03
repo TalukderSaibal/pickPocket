@@ -30,41 +30,41 @@
 
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 
-<script>
-    $(document).ready(function(){
-        $('#myForm').submit(function(event){
-            event.preventDefault();
+    <script>
+        $(document).ready(function(){
+            $('#myForm').submit(function(event){
+                event.preventDefault();
 
-            var formData = $(this).serialize();
+                var formData = $(this).serialize();
 
-            $.ajax({
-                url: 'langauge_create',
-                type: 'POST',
-                dataType: 'json',
-                data: formData,
-                beforeSend: function(){
-                    $('#loadingImage').show();
-                },
-                success: function(response){
-                    if(response.languageName && response.languageName.status == 'failed'){
-                        $('#nameErr').text(response.languageName.message);
+                $.ajax({
+                    url: "<?= base_url('langauge_create') ?>",
+                    type: 'POST',
+                    dataType: 'json',
+                    data: formData,
+                    beforeSend: function(){
+                        $('#loadingImage').show();
+                    },
+                    success: function(response){
+                        if(response.languageName && response.languageName.status == 'failed'){
+                            $('#nameErr').text(response.languageName.message);
+                        }
+
+                        if(response.languageCode && response.languageCode.status == 'failed'){
+                            $('#codeErr').text(response.languageCode.message);
+                        }
+
+                        if(response.status && response.status == 'success'){
+                            $('#successDiv').text(response.message).show();
+                            $('#myForm')[0].reset();
+                        }else{
+                            $('#successDiv').text(response.message).show();
+                        }
+                        $('#loadingImage').hide();
                     }
-
-                    if(response.languageCode && response.languageCode.status == 'failed'){
-                        $('#codeErr').text(response.languageCode.message);
-                    }
-
-                    if(response.status && response.status == 'success'){
-                        $('#successDiv').text(response.message).show();
-                        $('#myForm')[0].reset();
-                    }else{
-                        $('#successDiv').text(response.message).show();
-                    }
-                    $('#loadingImage').hide();
-                }
+                })
             })
-        })
-    });
-</script>
+        });
+    </script>
 
 <?= $this->endSection('content') ?>
