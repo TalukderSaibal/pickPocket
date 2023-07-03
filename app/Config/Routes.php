@@ -37,6 +37,12 @@ $routes->get('/languages/add', 'LanguageController::languageAdd');
 
 $routes->post('/langauge_create', 'LanguageController::create');
 
+//Product Units create
+$routes->get('/product/units', 'ProductUnitController::index');
+$routes->post('/unit_create', 'ProductUnitController::create');
+$routes->get('unit/edit/(:any)', 'ProductUnitController::unitEdit/$1');
+$routes->post('/unit_update', 'ProductUnitController::update');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
