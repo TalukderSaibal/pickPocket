@@ -88,7 +88,7 @@
                             <td><?= $unit['unit_name'] ?></td>
                             <td>Active</td>
                             <td>
-                                <a href="<?= base_url('unit/edit/'.$unit['unit_id']) ?>">Edit</a> | <a href="">Delete</a>
+                                <a href="<?= base_url('unit/edit/'.$unit['unit_id']) ?>">Edit</a> | <a href="<?= base_url('unit/delete/'.$unit['unit_id']) ?>">Delete</a>
                             </td>
                         </tr>
                 <?php }

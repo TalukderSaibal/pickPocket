@@ -32,4 +32,15 @@ class ProductUnitModel extends Model
             return false;
         }
     }
+
+    //Delete Methods
+    public function deleteData($id){
+        $res = $this->delete($id);
+
+        if($res){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

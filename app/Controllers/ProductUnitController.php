@@ -132,4 +132,14 @@ class ProductUnitController extends BaseController
             return json_encode($response);
         }
     }
+
+
+    //Prodcut Unit Delete
+    public function delete($id){
+        $res = $this->productUnitModel->deleteData($id);
+
+        if($res == true){
+            return redirect()->to('/product/units');
+        }
+    }
 }

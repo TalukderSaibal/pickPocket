@@ -42,6 +42,7 @@ $routes->get('/product/units', 'ProductUnitController::index');
 $routes->post('/unit_create', 'ProductUnitController::create');
 $routes->get('unit/edit/(:any)', 'ProductUnitController::unitEdit/$1');
 $routes->post('/unit_update', 'ProductUnitController::update');
+$routes->get('/unit/delete/(:any)', 'ProductUnitController::delete/$1');
 
 /*
  * --------------------------------------------------------------------
