@@ -31,6 +31,9 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+// Language create
+$routes->get('/languages', 'LanguageController::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
