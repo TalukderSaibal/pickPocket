@@ -76,7 +76,7 @@ class ProductUnitController extends BaseController
     public function unitEdit($id){
         $query = 'SELECT * FROM product_unit
         LEFT JOIN languages ON product_unit.language_id = languages.id
-        WHERE product_unit.id = ' . $id;
+        WHERE product_unit.unit_id = ' . $id;
         $data = $this->db->query($query);
         $res = $data->getResult();
 

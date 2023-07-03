@@ -14,7 +14,7 @@
             
             ?>
             <div class="form-group">
-                <input type="hidden" class="form-control" name="unitId" value="<?= $val->id ?>">
+                <input type="hidden" class="form-control" name="unitId" value="<?= $val->unit_id ?>">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Language</label>

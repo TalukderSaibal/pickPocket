@@ -84,11 +84,11 @@
                 if(count($units)){
                     foreach($units as $unit){ ?>
                         <tr>
-                            <th scope="row"><?= $unit['id'] ?></th>
+                            <th scope="row"><?= $unit['unit_id'] ?></th>
                             <td><?= $unit['unit_name'] ?></td>
                             <td>Active</td>
                             <td>
-                                <a href="<?= base_url('unit/edit/'.$unit['id']) ?>">Edit</a> | <a href="">Delete</a>
+                                <a href="<?= base_url('unit/edit/'.$unit['unit_id']) ?>">Edit</a> | <a href="">Delete</a>
                             </td>
                         </tr>
                 <?php }

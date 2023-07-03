@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class ProductUnitModel extends Model
 {
     protected $table = 'product_unit';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'unit_id';
     protected $allowedFields = ['language_id', 'unit_name'];
 
     //Data Insert Methods
