@@ -44,6 +44,9 @@ $routes->get('unit/edit/(:any)', 'ProductUnitController::unitEdit/$1');
 $routes->post('/unit_update', 'ProductUnitController::update');
 $routes->get('/unit/delete/(:any)', 'ProductUnitController::delete/$1');
 
+//Product Attributes
+$routes->get('/product/attribute', 'ProductAttributeController::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

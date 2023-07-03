@@ -60,7 +60,7 @@
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="<?= base_url('product/units') ?>">Product Units</a></li>
-                            <li><a href="chart-morris.html">Product Attributes</a></li>
+                            <li><a href="<?= base_url('product/attribute') ?>">Product Attributes</a></li>
                             <li><a href="chartjs.html">Product Variations</a></li>
                             <li><a href="chartist.html">Product Brands</a></li>
                             <li><a href="chart-peity.html">Product Categories</a></li>
