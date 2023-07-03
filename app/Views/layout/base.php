@@ -19,6 +19,10 @@
     <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
     <!-- Standard iPhone Touch Icon-->
     <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+    <!-- Font Awesome CDN Link Here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
     <!-- Styles -->
     <link href="<?= base_url('css/lib/calendar2/pignose.calendar.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('css/lib/chartist/chartist.min.css') ?>" rel="stylesheet">
@@ -46,8 +50,8 @@
                                 class="badge badge-primary">2</span> <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="<?= base_url('languages') ?>">Add Language</a></li>
-                            <li><a href="index.html">Dashboard 2</a></li>
+                            <li><a href="<?= base_url('languages/add') ?>">Add Language</a></li>
+                            <li><a href="<?= base_url('languages') ?>">Language List</a></li>
                         </ul>
                     </li>
 

@@ -33,6 +33,8 @@ $routes->get('/', 'Home::index');
 
 // Language create
 $routes->get('/languages', 'LanguageController::index');
+$routes->post('/langauge_create', 'LanguageController::create');
+$routes->get('/languages/add', 'LanguageController::languageAdd');
 
 /*
  * --------------------------------------------------------------------

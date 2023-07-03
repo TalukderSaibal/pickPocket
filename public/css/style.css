@@ -4315,6 +4315,44 @@ h6.h1 {
   background-color: #dc3545;
   color: #ffffff;
 }
+
+/* Custom CSS code start from here */
+#successDiv {
+  background-color: darkblue;
+  padding: 10px 12px 10px;
+  width: 30%;
+  border-radius: 4px;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  display: none;
+}
+
+.list_div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagination-1{
+  margin-top: .5rem;
+}
+
+.pagination-1 li{
+  background-color: #1253ce;
+  width: 25px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.pagination-1 a{
+  color: #fff;
+}
+/* Custom CSS code end from here */
+
+
+
+
 /*
 /* Version: 1.0
 */
@@ -4512,3 +4550,5 @@ h6.h1 {
     display: inline-block !important;
   }
 }
+
+
