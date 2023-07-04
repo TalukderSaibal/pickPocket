@@ -65,6 +65,10 @@ $routes->get('/brand/edit/(:any)', 'ProductBrandController::brandEdit/$1');
 $routes->post('/brand_update', 'ProductBrandController::update');
 $routes->post('/brand_delete', 'ProductBrandController::delete');
 
+//Product Categories
+$routes->get('product/categories', 'ProductCategoriesController::index');
+$routes->post('/category_create', 'ProductCategoriesController::create');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
