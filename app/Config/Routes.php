@@ -51,6 +51,12 @@ $routes->get('/attribute/edit/(:any)', 'ProductAttributeController::attributeEdi
 $routes->post('/attribute_update', 'ProductAttributeController::update');
 $routes->post('/attribute_delete', 'ProductAttributeController::delete');
 
+//Product Variations
+$routes->get('/product/variations', 'ProductVariationController::index');
+$routes->post('/variation_create', 'ProductVariationController::create');
+$routes->get('/variation/edit/(:any)', 'ProductVariationController::variationEdit/$1');
+$routes->post('/variation_update', 'ProductVariationController::update');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
