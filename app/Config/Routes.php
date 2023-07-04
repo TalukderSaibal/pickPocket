@@ -56,7 +56,13 @@ $routes->get('/product/variations', 'ProductVariationController::index');
 $routes->post('/variation_create', 'ProductVariationController::create');
 $routes->get('/variation/edit/(:any)', 'ProductVariationController::variationEdit/$1');
 $routes->post('/variation_update', 'ProductVariationController::update');
-$routes->post('/variation_delete', 'ProductVariationController::delete'); 
+$routes->post('/variation_delete', 'ProductVariationController::delete');
+
+//Product Brand
+$routes->get('/product/brand', 'ProductBrandController::index');
+$routes->post('/brand_create', 'ProductBrandController::create');
+$routes->get('/brand/edit/(:any)', 'ProductBrandController::brandEdit/$1');
+$routes->post('/brand_update', 'ProductBrandController::update');
 
 /*
  * --------------------------------------------------------------------
