@@ -5,6 +5,12 @@
 <div class="container">
     <h2>Product Attribute</h2>
 
+    <div id="deleteDiv">
+        <p>Are you sure want to delete ?</p>
+        <button id="okBtn">Ok</button>
+        <button id="cancelBtn">Cancel</button>
+    </div>
+
     <div class="table_div">
     <div id="successDiv"></div>
     <div class="modal_div">
@@ -88,7 +94,7 @@
                             <td><?= $attribute['attribute_name'] ?></td>
                             <td>Active</td>
                             <td>
-                                <a href="<?= base_url('attribute/edit/'.$attribute['id']) ?>">Edit</a> | <a href="<?= base_url('attribute/delete/'.$attribute['id']) ?>">Delete</a>
+                                <a href="<?= base_url('attribute/edit/'.$attribute['id']) ?>">Edit</a> | <a class="deleteBtn" href="" data-id="<?= $attribute['id'] ?>">Delete</a>
                             </td>
                         </tr>
                 <?php }
@@ -147,6 +153,37 @@
                 },
             })
         })
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('.deleteBtn').click(function(){
+            $('#deleteDiv').show();
+            var id = $(this).data('id');
+                $('#okBtn').click(function(){
+                    $.ajax({
+                        url: "<?= base_url('attribute_delete') ?>",
+                        type: "POST",
+                        data: 'id=' + id,
+                        dataType: "json",
+                        success: function(response) {
+                            if(response.status && response.status == 'success'){
+                                $('#successDiv').text(response.message).show();
+                                location.reload();
+                            }else{
+                                $('#successDiv').text(response.message).show();
+                            }
+                        }
+                    });
+                    $('#deleteDiv').hide();
+                });
+            return false;
+        });
+
+        $('#cancelBtn').click(function(){
+            $('#deleteDiv').hide();
+        });
     });
 </script>
 

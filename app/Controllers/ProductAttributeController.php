@@ -127,5 +127,26 @@ class ProductAttributeController extends BaseController
             return json_encode($response);
         }
     }
+
+    //Delete a product attribute
+    public function delete(){
+        $atrributeId = $this->request->getPost('id');
+
+        $res = $this->productAttributeModel->delete($atrributeId);
+
+        if($res){
+            $response = [
+                'status' => 'success',
+                'message' => 'Attribute was successfully deleted',
+            ];
+            return json_encode($response);
+        }else{
+            $response = [
+                'status' => 'success',
+                'message' => 'Attribute was delete failed',
+            ];
+            return json_encode($response);
+        }
+    }
     
 }

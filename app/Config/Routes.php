@@ -49,6 +49,7 @@ $routes->get('/product/attribute', 'ProductAttributeController::index');
 $routes->post('/attribute_create', 'ProductAttributeController::create');
 $routes->get('/attribute/edit/(:any)', 'ProductAttributeController::attributeEdit/$1');
 $routes->post('/attribute_update', 'ProductAttributeController::update');
+$routes->post('/attribute_delete', 'ProductAttributeController::delete');
 
 /*
  * --------------------------------------------------------------------

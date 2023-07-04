@@ -4353,6 +4353,17 @@ h6.h1 {
 .modal_div {
   margin-left: 95%;
 }
+
+#deleteDiv {
+  position: absolute;
+  background-color: black;
+  padding: 10px 12px 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  left: 50%;
+  top: 60%;
+  display: none;
+}
 /* Custom CSS code end from here */
 
 
