@@ -147,4 +147,25 @@ class ProductBrandController extends BaseController
             return json_encode($response);
         }
     }
+
+    //Brand Delete
+    public function delete(){
+        $brandId = $this->request->getPost('id');
+
+        $res = $this->productBrandModel->delete($brandId);
+
+        if($res){
+            $response = [
+                'status' => 'success',
+                'message' => 'Brand was successfully deleted',
+            ];
+            return json_encode($response);
+        }else{
+            $response = [
+                'status' => 'success',
+                'message' => 'Brand was delete failed',
+            ];
+            return json_encode($response);
+        }
+    }
 }

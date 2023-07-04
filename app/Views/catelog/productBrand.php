@@ -105,7 +105,7 @@
                         <td><?= $brand['brand_slug'] ?></td>
                         <td>Active</td>
                         <td>
-                            <a href="<?= base_url('brand/edit/'.$brand['id']) ?>">Edit</a> | <a class="deleteBtn" href="" data-id="">Delete</a>
+                            <a href="<?= base_url('brand/edit/'.$brand['id']) ?>">Edit</a> | <a class="deleteBtn" href="" data-id="<?= $brand['id'] ?>">Delete</a>
                         </td>
                     </tr> 
                 <?php  }
@@ -175,7 +175,7 @@
             var id = $(this).data('id');
                 $('#okBtn').click(function(){
                     $.ajax({
-                        url: "<?= base_url('attribute_delete') ?>",
+                        url: "<?= base_url('brand_delete') ?>",
                         type: "POST",
                         data: 'id=' + id,
                         dataType: "json",
