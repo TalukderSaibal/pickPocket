@@ -149,4 +149,25 @@ class ProductVariationController extends BaseController
         }
     }
 
+    //Product Variation delete method
+    public function delete(){
+        $variationId = $this->request->getPost('id');
+
+        $res = $this->productVariationModel->delete($variationId);
+
+        if($res){
+            $response = [
+                'status' => 'success',
+                'message' => 'Attribute was successfully deleted',
+            ];
+            return json_encode($response);
+        }else{
+            $response = [
+                'status' => 'success',
+                'message' => 'Attribute was delete failed',
+            ];
+            return json_encode($response);
+        }
+    }
+
 }

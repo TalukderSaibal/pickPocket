@@ -107,7 +107,7 @@
                         <td><?= $variation->variationName ?></td>
                         <td><?= $variation->attribute_name ?></td>
                         <td>
-                            <a href="<?= base_url('variation/edit/'. $variation->variationId) ?>">Edit</a> | <a class="deleteBtn" href="" data-id="">Delete</a>
+                            <a href="<?= base_url('variation/edit/'. $variation->variationId) ?>">Edit</a> | <a class="deleteBtn" href="" data-id="<?= $variation->variationId ?>">Delete</a>
                         </td>
                     </tr>  
                 <?php }
@@ -164,7 +164,7 @@
             var id = $(this).data('id');
                 $('#okBtn').click(function(){
                     $.ajax({
-                        url: "<?= base_url('attribute_delete') ?>",
+                        url: "<?= base_url('variation_delete') ?>",
                         type: "POST",
                         data: 'id=' + id,
                         dataType: "json",

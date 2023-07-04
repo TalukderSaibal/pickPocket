@@ -56,6 +56,7 @@ $routes->get('/product/variations', 'ProductVariationController::index');
 $routes->post('/variation_create', 'ProductVariationController::create');
 $routes->get('/variation/edit/(:any)', 'ProductVariationController::variationEdit/$1');
 $routes->post('/variation_update', 'ProductVariationController::update');
+$routes->post('/variation_delete', 'ProductVariationController::delete'); 
 
 /*
  * --------------------------------------------------------------------
