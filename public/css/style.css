@@ -4364,6 +4364,21 @@ h6.h1 {
   top: 60%;
   display: none;
 }
+
+.deleteButton{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deleteButton button{
+  border: none;
+  border-radius: 4px;
+  background-color: #03a9f4;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
 /* Custom CSS code end from here */
 
 

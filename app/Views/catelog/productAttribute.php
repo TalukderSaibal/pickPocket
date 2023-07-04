@@ -6,9 +6,11 @@
     <h2>Product Attribute</h2>
 
     <div id="deleteDiv">
-        <p>Are you sure want to delete ?</p>
-        <button id="okBtn">Ok</button>
-        <button id="cancelBtn">Cancel</button>
+        <p style="color: #fff;">Are you sure want to delete ?</p>
+        <div class="deleteButton">
+            <button id="okBtn">Ok</button>
+            <button id="cancelBtn">Cancel</button>
+        </div>
     </div>
 
     <div class="table_div">
