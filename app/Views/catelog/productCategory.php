@@ -136,7 +136,7 @@
                             <td><?= $cat['category_description'] ?></td>
                             <td><?= $cat['category_slug'] ?></td>
                             <td>
-                                <a href="">Edit</a> | <a class="deleteBtn" href="" data-id="">Delete</a>
+                                <a href="<?= base_url('category/edit/'.$cat['id']) ?>">Edit</a> | <a class="deleteBtn" href="" data-id="">Delete</a>
                             </td>
                         </tr> 
                 <?php }

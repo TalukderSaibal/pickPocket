@@ -86,4 +86,9 @@ class ProductCategoriesController extends BaseController
             return json_encode($response);
         }
     }
+
+    //Product Category Form view
+    public function categoryEdit($id){
+        return view('catelog/categoryEdit');
+    }
 }

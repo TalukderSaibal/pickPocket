@@ -68,6 +68,7 @@ $routes->post('/brand_delete', 'ProductBrandController::delete');
 //Product Categories
 $routes->get('product/categories', 'ProductCategoriesController::index');
 $routes->post('/category_create', 'ProductCategoriesController::create');
+$routes->get('/category/edit/(:any)', 'ProductCategoriesController::categoryEdit/$1');
 
 /*
  * --------------------------------------------------------------------
