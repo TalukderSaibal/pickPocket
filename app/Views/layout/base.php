@@ -74,7 +74,7 @@
                     <li><a href="app-profile.html"><i class="ti-user"></i> Profile</a></li>
                     <li><a href="app-widget-card.html"><i class="ti-layout-grid2-alt"></i> Widget</a></li>
                     <li class="label">Features</li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-layout"></i> UI Elements <span
+                    <li><a class="sidebar-sub-toggle"><i class="ti-layout"></i> Stock/Inventory <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="ui-typography.html">Typography</a></li>
