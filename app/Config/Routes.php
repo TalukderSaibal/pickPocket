@@ -76,6 +76,10 @@ $routes->post('/product-create', 'ProductController::create');
 $routes->post('/product-advance-add', 'ProductController::advanceCreate');
 $routes->post('/seo-product-add', 'ProductController::seoCreate');
 
+//Stock/Inventory
+$routes->get('/add-stock', 'StockController::stockCreate');
+$routes->post('/stock-create', 'StockController::create');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
