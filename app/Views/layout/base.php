@@ -80,7 +80,7 @@
                             <li><a href="ui-typography.html">List Stock</a></li>
                             <li><a href="<?= base_url('add-stock') ?>">Add Stock</a></li>
                             <li><a href="ui-button.html">List Stock Transfer</a></li>
-                            <li><a href="ui-dropdown.html">Add Stock Transfer</a></li>
+                            <li><a href="<?= base_url('stock-transfer-create') ?>">Add Stock Transfer</a></li>
                         </ul>
                     </li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-panel"></i> Components <span
