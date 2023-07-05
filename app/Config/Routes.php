@@ -73,6 +73,8 @@ $routes->get('/category/edit/(:any)', 'ProductCategoriesController::categoryEdit
 //Add Product
 $routes->get('/add-product', 'ProductController::index');
 $routes->post('/product-create', 'ProductController::create');
+$routes->post('/product-advance-add', 'ProductController::advanceCreate');
+$routes->post('/seo-product-add', 'ProductController::seoCreate');
 
 /*
  * --------------------------------------------------------------------
