@@ -20,7 +20,7 @@ class StockController extends BaseController
      * Stock List Method
      */
     public function index(){
-
+        return view('Inventory/StockTransferList');
     }
 
     /**

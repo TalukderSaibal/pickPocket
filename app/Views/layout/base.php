@@ -79,7 +79,7 @@
                         <ul>
                             <li><a href="ui-typography.html">List Stock</a></li>
                             <li><a href="<?= base_url('add-stock') ?>">Add Stock</a></li>
-                            <li><a href="ui-button.html">List Stock Transfer</a></li>
+                            <li><a href="<?= base_url('transfer-list') ?>">List Stock Transfer</a></li>
                             <li><a href="<?= base_url('stock-transfer-create') ?>">Add Stock Transfer</a></li>
                         </ul>
                     </li>

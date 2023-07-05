@@ -77,6 +77,7 @@ $routes->post('/product-advance-add', 'ProductController::advanceCreate');
 $routes->post('/seo-product-add', 'ProductController::seoCreate');
 
 //Stock/Inventory
+$routes->get('/transfer-list', 'StockController::index');
 $routes->get('/add-stock', 'StockController::stockCreate');
 $routes->post('/stock-create', 'StockController::create');
 $routes->get('/stock-transfer-create', 'StockController::transferCreate');
