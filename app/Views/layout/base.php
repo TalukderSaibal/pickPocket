@@ -77,17 +77,10 @@
                     <li><a class="sidebar-sub-toggle"><i class="ti-layout"></i> Stock/Inventory <span
                                 class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="ui-typography.html">Typography</a></li>
-                            <li><a href="ui-alerts.html">Alerts</a></li>
-
-                            <li><a href="ui-button.html">Button</a></li>
-                            <li><a href="ui-dropdown.html">Dropdown</a></li>
-
-                            <li><a href="ui-list-group.html">List Group</a></li>
-
-                            <li><a href="ui-progressbar.html">Progressbar</a></li>
-                            <li><a href="ui-tab.html">Tab</a></li>
-
+                            <li><a href="ui-typography.html">List Stock</a></li>
+                            <li><a href="<?= base_url('add-stock') ?>">Add Stock</a></li>
+                            <li><a href="ui-button.html">List Stock Transfer</a></li>
+                            <li><a href="ui-dropdown.html">Add Stock Transfer</a></li>
                         </ul>
                     </li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-panel"></i> Components <span
