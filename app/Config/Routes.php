@@ -70,6 +70,10 @@ $routes->get('product/categories', 'ProductCategoriesController::index');
 $routes->post('/category_create', 'ProductCategoriesController::create');
 $routes->get('/category/edit/(:any)', 'ProductCategoriesController::categoryEdit/$1');
 
+//Add Product
+$routes->get('/add-product', 'ProductController::index');
+$routes->post('/product-create', 'ProductController::create');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

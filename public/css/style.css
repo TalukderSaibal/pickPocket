@@ -4379,6 +4379,22 @@ h6.h1 {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   cursor: pointer;
 }
+
+.form_button {
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.all_form{
+  display: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px 12px 10px;
+}
 /* Custom CSS code end from here */
 
 

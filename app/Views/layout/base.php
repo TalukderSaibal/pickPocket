@@ -64,7 +64,7 @@
                             <li><a href="<?= base_url('product/variations') ?>">Product Variations</a></li>
                             <li><a href="<?= base_url('product/brand')?>">Product Brands</a></li>
                             <li><a href="<?= base_url('product/categories') ?>">Product Categories</a></li>
-                            <li><a href="chart-sparkline.html">Add Product</a></li>
+                            <li><a href="<?= base_url('add-product') ?>">Add Product</a></li>
                             <li><a href="chart-knob.html">Product List</a></li>
                             <li><a href="chart-knob.html">Product Review</a></li>
                         </ul>
