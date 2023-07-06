@@ -9,6 +9,7 @@ class ProductAdvanceModel extends Model
     protected $table = 'product_advance';
     protected $primaryKey = 'id';
     protected $allowedFields = [
+        'product_id',
         'product_type', 
         'is_active', 
         'is_point',

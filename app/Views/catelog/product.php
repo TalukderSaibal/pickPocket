@@ -76,6 +76,7 @@
         <div class="all_form" id="advance_form">
             <h4>Advanced Information</h4>
             <form action="" method="POST" enctype="multipart/form-data" id="advanceForm">
+
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Product Type</label>
                     <select class="form-control" name="productType">
