@@ -79,7 +79,7 @@
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">Product ID</label>
-                    <input type="hidden" class="form-control" name="productId" value="" id="productId">
+                    <input type="text" class="form-control" name="productId" value="" id="productId">
                     <span style="color:red;" id="weightErr"></span>
                 </div>
 
@@ -201,7 +201,7 @@
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">Product ID</label>
-                    <input type="hidden" class="form-control" name="seoProductId" value="" id="seoProductId">
+                    <input type="text" class="form-control" name="seoProductId" value="" id="seoProductId">
                     <span style="color:red;" id="weightErr"></span>
                 </div>
 

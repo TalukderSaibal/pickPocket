@@ -38,6 +38,20 @@ class ProductController extends BaseController
     }
 
     /**
+     * Porduct List method
+     */
+    public function productList(){
+        $query = 'SELECT * FROM product_general
+        LEFT JOIN product_advance ON product_general.id = product_advance.product_id';
+        $res = $this->db->query($query);
+        $data = [
+            'products' => $res->getResult()
+        ];
+
+        return view('catelog/productList', $data);
+    }
+
+    /**
      * Creates a new Product
      */
     public function create(){
