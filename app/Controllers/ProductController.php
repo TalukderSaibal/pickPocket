@@ -12,7 +12,6 @@ use App\Models\ProductSeoModel;
 class ProductController extends BaseController
 {
     protected $productModel,$db;
-    public $productId = '';
 
     public function __construct(){
         $this->productModel = new ProductModel();
@@ -88,8 +87,11 @@ class ProductController extends BaseController
 
         $res = $this->productModel->insert($data);
 
+        $productId = $this->productModel->getInsertID();
+
         if($res){
             $response = [
+                'productId' => $productId,
                 'status' => 'success',
                 'message' => 'Product successfully inserted',
             ];
@@ -133,11 +135,9 @@ class ProductController extends BaseController
         }
 
         $productAdvanceModel = new ProductAdvanceModel;
-        $productId           = $this->productModel->orderBy('id', 'DESC')->first();
-        $this->productId     = $productId['id'];
 
         $data = [
-            'product_id'     => $this->productId,
+            'product_id'     => $this->request->getPost('productId'),
             'product_type'   => $this->request->getPost('productType'),
             'is_active'      => $this->request->getPost('isActive'),
             'is_point'       => $this->request->getPost('isPoint'),
@@ -188,11 +188,9 @@ class ProductController extends BaseController
         }
 
         $productSeoModel = new ProductSeoModel();
-        $productId       = $this->productModel->orderBy('id', 'DESC')->first();
-        $this->productId = $productId['id'];
 
         $data = [
-            'product_id'           => $this->productId,
+            'product_id'           => $this->request->getPost('seoProductId'),
             'seo_meta_tag'         => $this->request->getPost('metaTags'),
             'seo_meta_description' => $this->request->getPost('seoDescription')
         ];

@@ -78,6 +78,12 @@
             <form action="" method="POST" enctype="multipart/form-data" id="advanceForm">
 
                 <div class="form-group">
+                    <label for="exampleInputEmail1">Product ID</label>
+                    <input type="hidden" class="form-control" name="productId" value="" id="productId">
+                    <span style="color:red;" id="weightErr"></span>
+                </div>
+
+                <div class="form-group">
                     <label for="exampleFormControlSelect1">Product Type</label>
                     <select class="form-control" name="productType">
                         <option value="" disabled selected>Select Product Type</option>
@@ -194,6 +200,12 @@
             <form action="" method="POST" enctype="multipart/form-data" id="seoForm">
 
                 <div class="form-group">
+                    <label for="exampleInputEmail1">Product ID</label>
+                    <input type="hidden" class="form-control" name="seoProductId" value="" id="seoProductId">
+                    <span style="color:red;" id="weightErr"></span>
+                </div>
+
+                <div class="form-group">
                     <label for="exampleInputEmail1">Seo Meta Tags</label>
                     <input type="text" class="form-control" name="metaTags" placeholder="Seo meta tags">
                     <span style="color:red;" id="tagsErr"></span>
@@ -275,6 +287,8 @@
                     if(response.status && response.status == 'success'){
                         $('#successDiv').text(response.message).show();
                         $('#basicForm')[0].reset();
+                        $('#productId').val(response.productId);
+                        $('#seoProductId').val(response.productId);
                         // location.reload();
                     }else {
                         $('#successDiv').text(response.message).show();
