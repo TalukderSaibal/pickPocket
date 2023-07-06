@@ -4,6 +4,13 @@
 
 <div class="container">
     <h2>Product Unit</h2>
+        <div class="tabslang" style="display: flex;">
+            <?php
+            foreach($languages as $lang){ ?>
+                <div class="tablang" data-id=<?= $lang->id ?>><?= $lang->language_name ?></div>
+            <?php }
+            ?> 
+        </div>
 
     <div class="table_div">
     <div id="successDiv"></div>
@@ -25,16 +32,20 @@
                 </div>
                 <div class="modal-body">
                     <form action="" method="POST" id="unitForm">
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Language</label>
-                            <select class="form-control" name="languageSelect" id="languageSelect">
-                                <?php
-                                    foreach($languages as $key => $value){ ?>
-                                        <option value="<?= $value->id ?>"><?= $value->language_name ?></option>
-                                    <?php }
-                                ?>
-                            </select>
+
+                        <div class="tabslang" style="display: flex;">
+                            <?php
+                            
+                            foreach($languages as $lang){ ?>
+                                <div class="tablang">
+                                    <?= $lang->language_name ?>
+                                </div>
+                            <?php }
+                            
+                            ?>
+                            
                         </div>
+
                         <div class="form-group">
                             <label for="exampleInputEmail1">Name <span style="color: red;">*</span> </label>
                             <input type="text" class="form-control" name="unitName" placeholder="Enter name">
@@ -116,6 +127,15 @@
 
 <script>
     $(document).ready(function(){
+        $('.tablang').click(function(){
+            var id = $(this).data('id');
+            alert($(this).html());
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
         $('#unitForm').submit(function(event){
             event.preventDefault();
 
@@ -147,15 +167,6 @@
                 },
             })
         })
-    });
-</script>
-
-<script>
-    $(document).ready(function(){
-        $('#searchInput').on('keyup', function(){
-            var searchQuery = $(this).val();
-            alert(searchQuery);
-        });
     });
 </script>
 

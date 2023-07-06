@@ -4395,6 +4395,11 @@ h6.h1 {
   margin: 10px auto;
   padding: 10px 12px 10px;
 }
+
+.tablang {
+  padding: 10px 12px 10px;
+  cursor: pointer;
+}
 /* Custom CSS code end from here */
 
 
