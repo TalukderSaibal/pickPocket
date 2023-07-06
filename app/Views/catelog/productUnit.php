@@ -63,7 +63,7 @@
 
             <div class="search_form">
                 <form action="" method="post">
-                    <input type="text">
+                    <input type="text" id="searchInput">
                     <input type="submit" value="Search">
                 </form>
             </div>
@@ -147,6 +147,15 @@
                 },
             })
         })
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('#searchInput').on('keyup', function(){
+            var searchQuery = $(this).val();
+            alert(searchQuery);
+        });
     });
 </script>
 
